@@ -100,7 +100,9 @@ function App() {
   }, []);
 
   const handleUploadButtonClick = () => {
-    fileInputRef.current?.click();
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
   };
 
   const handleFilesSelected = (event) => {
