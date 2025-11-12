@@ -1,5 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
-import './App.css';
+const { useEffect, useMemo, useRef, useState } = React;
 
 const translations = {
   zh: {
@@ -321,4 +320,6 @@ function App() {
   );
 }
 
-export default App;
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement);
+root.render(<App />);
